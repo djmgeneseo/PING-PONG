@@ -1,7 +1,3 @@
-<html>
-<canvas id = "gameCanvas" width = "700" height = "600"></canvas>
-
-<script>
 //global variables
 var canvas;
 var canvasContext;
@@ -27,14 +23,14 @@ var showingWinScreen = false;
 window.onload = function () {
 	console.log("Obligatory 'Hello World!'");
 	canvas = document.getElementById('gameCanvas'); //fishes for html canvas element by id
-	canvasContext = canvas.getContext('2d'); //can draw graphics to
+	canvasContext = canvas.getContext('2d'); //can draw graphics 
 
 	//Drawing graphics and adding movement
 	var fps = 60;
 	setInterval(function() {moveEverything(); drawEverything();} /* inline function*/, 1000/fps);
 
 	//During Win Screen
-	canvas.addEventListener('mousedown', handleMouseClick);
+	canvas.addEventListener('click', handleMouseClick);
 
 	//Movement of paddles with mouse
 	canvas.addEventListener('mousemove', 
@@ -196,7 +192,3 @@ function ballReset() {
 
 	ballSpeedX = -ballSpeedX;
 } // ballReset()
-
-</script>
-
-</html>
